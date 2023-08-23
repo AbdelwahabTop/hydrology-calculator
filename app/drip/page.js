@@ -7,6 +7,12 @@ import PlanningResult from "@/components/PlanningResult";
 import { Divider } from "@mui/material";
 import { useEffect, useState } from "react";
 
+/*Due to time constraints and the uncertainty of our university professors' acceptance of this new idea, 
+it is crucial to develop this application quickly. To provide a demonstration, we are currently utilizing useState and prop drilling for state handling.
+However, for improved state management in the future, we plan to implement the context API. 
+The code requires significant refactoring and structural improvements. Additionally, the user interface needs further attention, 
+and we have utilized Material UI for its convenience within the limited timeframe, as previously mentioned. 
+ */
 export default function Planning() {
   const [inputValue, setInputValue] = useState("");
   const [width, setWidth] = useState(0);
