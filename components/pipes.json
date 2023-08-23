@@ -1,0 +1,182 @@
+[
+  {
+    "SKU": 2017450038,
+    "internalD": 14.5,
+    "price": 245.01
+  },
+  {
+    "SKU": 2670124,
+    "internalD": 3.54,
+    "price": 2.62
+  },
+  {
+    "SKU": 1012020906,
+    "internalD": 0.57,
+    "price": 1.75
+  },
+  {
+    "SKU": 1012025908,
+    "internalD": 0.71,
+    "price": 2.62
+  },
+  {
+    "SKU": 1012032910,
+    "internalD": 0.91,
+    "price": 4.32
+  },
+  {
+    "SKU": 1012040912,
+    "internalD": 1.14,
+    "price": 6.54
+  },
+  {
+    "SKU": 1012050914,
+    "internalD": 1.43,
+    "price": 10.68
+  },
+  {
+    "SKU": 1012063916,
+    "internalD": 1.8,
+    "price": 16.3
+  },
+  {
+    "SKU": 1012075918,
+    "internalD": 2.14,
+    "price": 23.73
+  },
+  {
+    "SKU": 1012090920,
+    "internalD": 2.57,
+    "price": 31.47
+  },
+  {
+    "SKU": 1012110922,
+    "internalD": 3.14,
+    "price": 44.78
+  },
+  {
+    "SKU": 1012125924,
+    "internalD": 3.57,
+    "price": 53.87
+  },
+  {
+    "SKU": 1012160926,
+    "internalD": 4.57,
+    "price": 73.99
+  },
+  {
+    "SKU": 1012200928,
+    "internalD": 5.72,
+    "price": 115.53
+  },
+  {
+    "SKU": 1012250930,
+    "internalD": 7.15,
+    "price": 179.01
+  },
+  {
+    "SKU": 1014032910,
+    "internalD": 1.03,
+    "price": 2.7
+  },
+  {
+    "SKU": 1014040912,
+    "internalD": 1.28,
+    "price": 4.17
+  },
+  {
+    "SKU": 1014050914,
+    "internalD": 1.61,
+    "price": 6.54
+  },
+  {
+    "SKU": 1014063916,
+    "internalD": 2.02,
+    "price": 10.41
+  },
+  {
+    "SKU": 1014075918,
+    "internalD": 2.42,
+    "price": 14.66
+  },
+  {
+    "SKU": 1014090920,
+    "internalD": 2.9,
+    "price": 20.1
+  },
+  {
+    "SKU": 1014125924,
+    "internalD": 4.02,
+    "price": 36.94
+  },
+  {
+    "SKU": 1014160926,
+    "internalD": 5.15,
+    "price": 48.37
+  },
+  {
+    "SKU": 1014200928,
+    "internalD": 6.44,
+    "price": 75.78
+  },
+  {
+    "SKU": 1014250930,
+    "internalD": 8.06,
+    "price": 113.81
+  },
+  {
+    "SKU": 1014315032,
+    "internalD": 10.2,
+    "price": 172.68
+  },
+  {
+    "SKU": 2017125024,
+    "internalD": 4.37,
+    "price": 24.12
+  },
+  {
+    "SKU": 2017160026,
+    "internalD": 5.59,
+    "price": 30.94
+  },
+  {
+    "SKU": 2017200028,
+    "internalD": 6.97,
+    "price": 49.49
+  },
+  {
+    "SKU": 2017250030,
+    "internalD": 8.74,
+    "price": 77.36
+  },
+  {
+    "SKU": 2017315032,
+    "internalD": 11,
+    "price": 118.73
+  },
+  {
+    "SKU": 2017355034,
+    "internalD": 12.4,
+    "price": 150.46
+  },
+  {
+    "SKU": 2017400036,
+    "internalD": 14,
+    "price": 191.63
+  },
+  {
+    "SKU": 2017450038,
+    "internalD": 15.8,
+    "price": 245.01
+  },
+  {
+    "SKU": 2017500040,
+    "internalD": 17.4,
+    "price": 308.78
+  },
+  {
+    "SKU": 2017630042,
+    "internalD": 22,
+    "price": 466.53
+  }
+ ]

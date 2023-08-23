@@ -10,37 +10,21 @@ import {
   RadioGroup,
   TextField,
 } from "@mui/material";
-import DropdownSection from "./DropdownSection";
-import InputBoxes from "./InputBoxes";
+import DropdownSection from "../DropdownSection";
+import InputBoxes from "../InputBoxes";
 import ParkOutlinedIcon from "@mui/icons-material/ParkOutlined";
-import StatPreview from "./StatPreview";
+import StatPreview from "../StatPreview";
 import ForestIcon from "@mui/icons-material/Forest";
 import WaterDropIcon from "@mui/icons-material/WaterDrop";
 import CircleOutlinedIcon from "@mui/icons-material/CircleOutlined";
 import { Divider } from "@mui/material";
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Modal from '@mui/material/Modal';
-import Image from 'next/image'
-import trees from "../public/tress.png"
+import WaterDropOutlinedIcon from "@mui/icons-material/WaterDropOutlined";
 
 const style = {
   display: "grid",
   gridTemplateColumns: "repeat(2, 1fr)",
   gridTemplateRows: "auto",
   gridGap: "10px",
-};
-
-const style2 = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
 };
 
 export default function Crop({
@@ -65,14 +49,20 @@ export default function Crop({
   setGasQ,
   gasLength,
   setGasLength,
+  design,
+  setDesign,
+  qMax,
+  setQMax,
   hrs,
 }) {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
   const [custom, setCustom] = useState("exist");
+  
   const handleChange = (event) => {
     setCustom(event.target.value);
+  };
+
+  const handleDesign = (event) => {
+    setDesign(event.target.value);
   };
 
   useEffect(() => {
@@ -85,25 +75,7 @@ export default function Crop({
 
   return (
 <div>
-  <h2>Crop details
-  <div>
-      <Button style={{fontWeight:"bold"}} variant="outlined" onClick={handleOpen}>See inputs explaination</Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style2}>
-        <Image
-      src={trees}
-      alt="Picture of the author"
-      width="980px"
-    />
-        </Box>
-      </Modal>
-    </div>
-  </h2>
+  <h2>Crop details</h2>
   <div
     style={{
       display: "grid",
@@ -114,47 +86,33 @@ export default function Crop({
     {/* CROP */}
     <div style={{ border: "10px", padding: "10px" }}>
       {/* Exit or Costom */}
-      <FormControl style={{ marginBottom: "16px" }}>
-        <FormLabel id="demo-radio-buttons-group-label">
-          Exist or custom
-        </FormLabel>
-        <RadioGroup
-          aria-labelledby="demo-radio-buttons-group-label"
-          defaultValue="exist"
-          name="radio-buttons-group"
-          value={custom}
-          onChange={handleChange}
-        >
-          <FormControlLabel
-            value="exist"
-            control={<Radio />}
-            label="Exist"
-          />
-          <FormControlLabel
-            value="custom"
-            control={<Radio />}
-            label="Custom"
-          />
-        </RadioGroup>
-      </FormControl>
-
-      {/* Crop details */}
-      {custom == "exist" ? (
-        <DropdownSection
-          inputValue={inputValue}
-          setInputValue={setInputValue}
-          setQ={setQ}
-          setX={setX}
-          setY={setY}
-        />
-      ) : (
-        <InputBoxes x={x} setX={setX} y={y} setY={setY} q={q} setQ={setQ} />
-      )}
-    </div>
+      <TextField
+      id="flow-design"
+      label="Max allowed Q (m³ /fed/day)"
+      value={qMax}
+      onFocus={(event) => {
+        event.target.select();
+      }}
+      onChange={(event) => {
+        setQMax(event.target.value);
+      }}
+      InputProps={{
+        startAdornment: (
+          <InputAdornment position="start">
+            <WaterDropOutlinedIcon />
+          </InputAdornment>
+        ),
+      }}
+      variant="outlined"
+      style={{ marginTop: "16px", maxWidth: "300px" }}
+    />
+      
+    </div> 
+    
+    
 
     {/* PALM */}
     <div>
-      <h2>Wind Protection</h2>
       {/* Palm CheckBox */}
       <FormGroup>
         <FormControlLabel
@@ -225,7 +183,10 @@ export default function Crop({
 
         {palmLength ? (
           <div
-            style={style}
+            style={{
+              opacity: palmLength ? 1 : 0,
+              transition: "opacity 1s",
+            }}
           >
             <StatPreview
               label="Number of palm trees"
@@ -292,7 +253,10 @@ export default function Crop({
 
         {gasLength ? (
           <div
-            style={style}
+            style={{
+              opacity: gasLength ? 1 : 0,
+              transition: "opacity 1s",
+            }}
           >
             <StatPreview
               label="Number of gas trees"
